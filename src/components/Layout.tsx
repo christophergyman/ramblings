@@ -31,7 +31,9 @@ export default function Layout() {
 
       <footer>
         <div className="px-6 md:px-20 py-6 text-sm text-muted font-mono">
-          &copy; {new Date().getFullYear()}
+          <span>&copy; {new Date().getFullYear()}</span>
+          <span className="mx-2">&middot;</span>
+          <span className="font-body font-light">Written by a human, not a machine</span>
         </div>
       </footer>
     </div>
