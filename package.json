@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "xattr -d com.apple.provenance node_modules/@esbuild/darwin-arm64/bin/esbuild 2>/dev/null; true"
   },
   "dependencies": {
     "marked": "^17.0.3",
