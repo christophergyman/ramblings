@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400&family=IBM+Plex+Mono:wght@400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f8f9fa;
+  --color-heading: #212529;
+  --color-body: #343a40;
+  --color-secondary: #6c757d;
+  --color-muted: #adb5bd;
+  --color-divider: #ced4da;
+  --color-divider-light: #e9ecef;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-body);
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prose styles for rendered markdown */
+.prose {
+  font-size: 17px;
+  line-height: 30px;
+  color: var(--color-body);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  line-height: 1.25;
+}
+
+.prose h1 { font-size: 32px; }
+.prose h2 { font-size: 22px; letter-spacing: -0.01em; line-height: 28px; }
+.prose h3 { font-size: 20px; }
+
+.prose p {
+  margin-bottom: 1.6em;
+}
+
+.prose a {
+  color: var(--color-heading);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: var(--color-secondary);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-divider);
+  padding-left: 1em;
+  color: var(--color-secondary);
+  font-style: italic;
+  margin: 1.4em 0;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-divider-light);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.prose pre {
+  background: var(--color-heading);
+  color: var(--color-divider-light);
+  padding: 1.2em 1.4em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.6em 0;
+  line-height: 1.6;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+  font-size: 14px;
+  color: inherit;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+  margin-bottom: 1.4em;
+}
+
+.prose li {
+  margin-bottom: 0.4em;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-divider);
+  margin: 2em 0;
+}
+
+.prose img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 1.6em 0;
+}
+
+@media (max-width: 767px) {
+  .prose {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .prose h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
