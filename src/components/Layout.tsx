@@ -12,13 +12,13 @@ export default function Layout() {
             ramblings
           </Link>
           <div className="flex gap-5 md:gap-8 font-display font-normal text-[13px] md:text-sm text-secondary">
-            <Link to="/" className="hover:text-heading no-underline">
+            <Link to="/archive" className="hover:text-heading no-underline">
               archive
             </Link>
-            <Link to="/" className="hover:text-heading no-underline">
+            <Link to="/about" className="hover:text-heading no-underline">
               about
             </Link>
-            <Link to="/" className="hover:text-heading no-underline">
+            <Link to="/rss" className="hover:text-heading no-underline">
               rss
             </Link>
           </div>
